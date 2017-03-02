@@ -1,0 +1,62 @@
+### https://raw.github.com/github/gitignore/5146122ace54e5f927d9d28d8a0d2cdb2b7eac27/Global/xcode.gitignore
+
+# Xcode
+#
+# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+
+## Build generated
+build/
+DerivedData/
+
+## Various settings
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+
+## Other
+*.moved-aside
+*.xccheckout
+*.xcscmblueprint
+
+## Pods
+Pods/*
+*.xcworkspace
+
+## bandler
+vendor/*
+.bundle
+
+## build_output
+*.app.dSYM.zip
+*.ipa
+
+## fastlane_report
+fastlane/report.xml
+
+## analyze_report
+swiftlint_report.xml
+
+## test_report
+fastlane/test_output/report.junit
+
+## Coverage_report
+test_output/
+fastlane/test_output
+
+## Coverage_report
+test_output/
+
+## deliver temporary files
+fastlane/Preview.html
+
+## snapshot generated screenshots
+fastlane/screenshots
+
+# Other
+keys/
