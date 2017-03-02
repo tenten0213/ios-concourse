@@ -27,7 +27,7 @@ platform :ios do
     scan(
       scheme: "ExampleForConcourse",
       clean: true,
-      device: 'iPhone 7'
+      device: 'iPhone 7',
       output_types: "junit",
       code_coverage: true,
     )
