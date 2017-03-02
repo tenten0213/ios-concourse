@@ -15,7 +15,14 @@ jobs:
           inputs:
             - name: ios-concourse
           run:
-            path: bash
+            path: sh
             args:
-              - "-c"
-              - "cd ios-concourse/ExampleForConcourse && bundle exec fastlane test"
+              - -c
+              - |
+                env
+                mkdir ios-concourse/ExampleForConcourse/Pods
+                chown -R $SUDO_USER ios-concourse/
+                chown -R $SUDO_USER ~/Library/Caches/CocoaPods
+                chown -R $SUDO_USER ~/.cocoapods
+                cd ios-concourse/ExampleForConcourse
+                sudo -u $SUDO_USER bundle exec fastlane test
