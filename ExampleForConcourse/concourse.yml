@@ -4,9 +4,8 @@ resources:
     source:
       uri: https://github.com/tenten0213/ios-concourse.git
       branch: master
-
 jobs:
-  - name: ios-concourse
+  - name: build
     plan:
       - get: ios-concourse
         trigger: true
