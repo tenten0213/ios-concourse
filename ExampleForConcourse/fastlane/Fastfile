@@ -24,7 +24,20 @@ platform :ios do
 
   desc "Runs all the tests"
   lane :test do
-    scan
+    scan(
+      scheme: "ExampleForConcourse",
+      clean: true,
+      output_types: "junit",
+      code_coverage: true,
+    )
+    slather(
+      cobertura_xml: true,
+      output_directory: "test_output",
+      proj: "ExampleForConcourse.xcodeproj",
+      workspace: "ExampleForConcourse.xcworkspace",
+      scheme: "ExampleForConcourse",
+      ignore:['../../*']
+    )
   end
 
   desc "Submit a new Beta Build to Apple TestFlight"
