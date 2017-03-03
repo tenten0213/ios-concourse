@@ -7,6 +7,7 @@ Building iOS application using [Concourse CI](https://concourse.ci/)
 first, clone this repo.
 
 ```bash
+$ mkdir -p keys/web keys/worker
 $ ssh-keygen -t rsa -f ./keys/web/tsa_host_key -N ''
 $ ssh-keygen -t rsa -f ./keys/web/session_signing_key -N ''
 $ ssh-keygen -t rsa -f ./keys/worker/worker_key -N ''
