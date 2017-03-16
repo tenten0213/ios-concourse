@@ -27,3 +27,8 @@ concourse-worker:
   volumes: ["./keys/worker:/concourse-keys"]
   environment:
     CONCOURSE_TSA_HOST: concourse-web
+
+apache:
+  image: httpd
+  ports: ["8000:80"]
+  volumes: ["./ExampleForConcourse/test_output:/usr/local/apache2/htdocs"]
