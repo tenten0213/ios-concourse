@@ -28,11 +28,11 @@ platform :ios do
       scheme: "ExampleForConcourse",
       clean: true,
       device: 'iPhone 7',
-      output_types: "junit",
+      output_types: "html",
       code_coverage: true,
     )
     slather(
-      cobertura_xml: true,
+      html: true,
       output_directory: "test_output",
       proj: "ExampleForConcourse.xcodeproj",
       workspace: "ExampleForConcourse.xcworkspace",
